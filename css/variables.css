@@ -1,123 +1,55 @@
+/* ===========================================
+   SEPRECA DESIGN SYSTEM
+   =========================================== */
+
 :root{
 
---azul:#0084B8;
+    /* Colores Corporativos */
 
---verde:#97C11F;
+    --primary:#0086B8;
+    --primary-dark:#006B93;
 
---verdeOscuro:#3B6F2A;
+    --secondary:#9CC31C;
+    --secondary-dark:#557A19;
 
---gris:#F3F6F8;
+    --accent:#64A70B;
 
---texto:#253746;
+    --success:#28C76F;
+    --warning:#FF9F43;
+    --danger:#EA5455;
 
---blanco:#FFFFFF;
+    --white:#FFFFFF;
 
---sombra:0 15px 40px rgba(0,0,0,.12);
+    --gray-100:#F8FAFC;
+    --gray-200:#EEF2F7;
+    --gray-300:#E4EAF1;
+    --gray-400:#CBD5E1;
+    --gray-500:#64748B;
+    --gray-700:#334155;
+    --gray-900:#0F172A;
 
-}
+    --text:var(--gray-700);
 
-*{
+    /* Sombras */
 
-margin:0;
+    --shadow-sm:0 8px 18px rgba(15,23,42,.06);
 
-padding:0;
+    --shadow-md:0 18px 35px rgba(15,23,42,.10);
 
-box-sizing:border-box;
+    --shadow-lg:0 30px 70px rgba(15,23,42,.15);
 
-}
+    /* Bordes */
 
-body{
+    --radius-sm:10px;
+    --radius-md:18px;
+    --radius-lg:28px;
 
-font-family:'Montserrat',sans-serif;
+    /* Transiciones */
 
-background:var(--gris);
+    --transition:.35s ease;
 
-color:var(--texto);
+    /* Tamaños */
 
-}
-
-header{
-
-background:var(--blanco);
-
-padding:30px;
-
-box-shadow:var(--sombra);
-
-}
-
-header h1{
-
-color:var(--azul);
-
-font-size:42px;
-
-font-weight:800;
-
-}
-
-header p{
-
-margin-top:8px;
-
-font-size:20px;
-
-}
-
-#dashboard{
-
-padding:60px;
-
-}
-
-#cards{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-
-gap:25px;
-
-margin-top:30px;
-
-}
-
-.card{
-
-background:white;
-
-padding:40px;
-
-border-radius:20px;
-
-box-shadow:var(--sombra);
-
-text-align:center;
-
-transition:.3s;
-
-}
-
-.card:hover{
-
-transform:translateY(-8px);
-
-}
-
-.card h3{
-
-font-size:48px;
-
-color:var(--azul);
-
-}
-
-.card span{
-
-display:block;
-
-margin-top:15px;
-
-font-weight:600;
+    --container:1400px;
 
 }
