@@ -1,75 +1,409 @@
-/*======================================
-LAYOUT GENERAL
-======================================*/
+/* ==========================================================================
+   SEPRECA PROJECT HUB
+   layout.css
+   Estructura General
+   ==========================================================================*/
 
-*{
+/* RESET */
 
-margin:0;
-padding:0;
-box-sizing:border-box;
-
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
+
+/* HTML */
 
 html{
-
-scroll-behavior:smooth;
-
+    scroll-behavior:smooth;
 }
+
+/* BODY */
 
 body{
 
-font-family:'Montserrat',sans-serif;
+    font-family:var(--font-family);
 
-background:var(--gray-100);
+    background:var(--background);
 
-color:var(--text);
+    color:var(--text-primary);
 
-overflow-x:hidden;
+    overflow-x:hidden;
+
+    line-height:1.7;
 
 }
+
+/* IMÁGENES */
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+    height:auto;
+
+}
+
+/* LINKS */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+/* LISTAS */
+
+ul{
+
+    list-style:none;
+
+}
+
+/* BOTONES */
+
+button{
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+
+    font-family:inherit;
+
+}
+
+/* CONTENEDOR */
 
 .container{
 
-width:min(92%,1400px);
+    width:min(92%, var(--container-width));
 
-margin:auto;
+    margin-inline:auto;
+
+}
+
+/* SECCIONES */
+
+.section{
+
+    padding:110px 0;
 
 }
 
-section{
+/* ENCABEZADOS */
 
-padding:90px 0;
+.section-header{
+
+    max-width:900px;
+
+    margin-bottom:70px;
 
 }
+
+.section-tag{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:8px 18px;
+
+    border-radius:50px;
+
+    background:rgba(0,134,184,.08);
+
+    color:var(--color-primary);
+
+    font-size:.85rem;
+
+    font-weight:700;
+
+    letter-spacing:.08em;
+
+    text-transform:uppercase;
+
+    margin-bottom:18px;
+
+}
+
+.section-header h2{
+
+    font-size:clamp(2rem,4vw,3.5rem);
+
+    font-weight:800;
+
+    margin-bottom:18px;
+
+    color:var(--text-primary);
+
+}
+
+.section-header p{
+
+    font-size:1.1rem;
+
+    color:var(--text-secondary);
+
+    max-width:760px;
+
+}
+
+/* GRID */
+
+.grid{
+
+    display:grid;
+
+    gap:32px;
+
+}
+
+/* DOS COLUMNAS */
+
+.grid-2{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+/* TRES COLUMNAS */
+
+.grid-3{
+
+    grid-template-columns:repeat(3,1fr);
+
+}
+
+/* CUATRO COLUMNAS */
+
+.grid-4{
+
+    grid-template-columns:repeat(4,1fr);
+
+}
+
+/* TARJETAS */
+
+.card{
+
+    background:var(--surface);
+
+    border-radius:var(--radius-lg);
+
+    padding:32px;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:var(--transition);
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+/* TÍTULOS */
 
 h1{
 
-font-size:clamp(2.6rem,5vw,4.5rem);
+    font-size:clamp(3rem,6vw,5.5rem);
 
-font-weight:800;
+    font-weight:800;
+
+    line-height:1.1;
 
 }
 
 h2{
 
-font-size:clamp(2rem,4vw,3rem);
+    font-size:clamp(2rem,4vw,3rem);
 
-font-weight:700;
-
-margin-bottom:20px;
+    font-weight:800;
 
 }
 
 h3{
 
-font-size:1.2rem;
+    font-size:1.4rem;
+
+    font-weight:700;
 
 }
 
+/* PÁRRAFOS */
+
 p{
 
-line-height:1.8;
+    color:var(--text-secondary);
 
-color:var(--gray-500);
+}
+
+/* SEPARADOR */
+
+.divider{
+
+    width:100%;
+
+    height:1px;
+
+    background:var(--border);
+
+    margin:60px 0;
+
+}
+
+/* ESPACIADOS */
+
+.mt-1{margin-top:8px;}
+.mt-2{margin-top:16px;}
+.mt-3{margin-top:24px;}
+.mt-4{margin-top:32px;}
+.mt-5{margin-top:48px;}
+
+.mb-1{margin-bottom:8px;}
+.mb-2{margin-bottom:16px;}
+.mb-3{margin-bottom:24px;}
+.mb-4{margin-bottom:32px;}
+.mb-5{margin-bottom:48px;}
+
+/* UTILIDADES */
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.text-right{
+
+    text-align:right;
+
+}
+
+.flex{
+
+    display:flex;
+
+}
+
+.flex-center{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.flex-between{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.hidden{
+
+    display:none;
+
+}
+
+.w-100{
+
+    width:100%;
+
+}
+
+/* FONDO SUAVE */
+
+.bg-light{
+
+    background:var(--gray-100);
+
+}
+
+/* FOOTER */
+
+.footer{
+
+    background:var(--gray-900);
+
+    color:white;
+
+    padding:var(--footer-padding) 0 40px;
+
+}
+
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr 1fr;
+
+    gap:60px;
+
+}
+
+.footer-brand img{
+
+    width:180px;
+
+    margin-bottom:24px;
+
+}
+
+.footer h4{
+
+    margin-bottom:20px;
+
+    color:white;
+
+}
+
+.footer ul{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.footer li{
+
+    color:#CBD5E1;
+
+}
+
+.footer-copy{
+
+    border-top:1px solid rgba(255,255,255,.1);
+
+    margin-top:70px;
+
+    padding-top:30px;
+
+    text-align:center;
+
+    color:#94A3B8;
 
 }
