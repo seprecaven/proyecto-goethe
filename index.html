@@ -1,41 +1,62 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Proyecto Goethe | SEPRECA</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="css/variables.css">
-<link rel="stylesheet" href="css/layout.css">
-<link rel="stylesheet" href="css/components.css">
-<link rel="stylesheet" href="css/animations.css">
-<link rel="stylesheet" href="css/responsive.css">
-
-</head>
-
 <body>
 
-<header>
+<header class="header">
 
-<h1>SEPRECA</h1>
+<nav class="navbar container">
 
-<p>Proyecto Goethe</p>
+<div class="logo">
+
+<img src="assets/logo-sepreca.png" alt="SEPRECA">
+
+</div>
+
+<ul>
+
+<li><a href="#dashboard">Dashboard</a></li>
+
+<li><a href="#planos">Planos</a></li>
+
+<li><a href="#cronograma">Cronograma</a></li>
+
+<li><a href="#galeria">Galería</a></li>
+
+<li><a href="#propuesta">Propuesta</a></li>
+
+</ul>
+
+</nav>
+
+<div class="hero container">
+
+<div class="hero-text">
+
+<h1>
+
+Proyecto Alemania
+
+</h1>
+
+<p>
+
+Remodelación Integral del Goethe Institut Caracas
+
+</p>
+
+<a href="#dashboard" class="btn">
+
+Explorar Proyecto
+
+</a>
+
+</div>
+
+</div>
 
 </header>
 
 <main>
 
-<section id="dashboard">
+<section id="dashboard" class="container">
 
 <h2>Dashboard Ejecutivo</h2>
 
@@ -43,9 +64,17 @@
 
 <div class="card">
 
-<h3>45</h3>
+<h3>30</h3>
 
-<span>Días</span>
+<span>Días hábiles</span>
+
+</div>
+
+<div class="card">
+
+<h3>5</h3>
+
+<span>Fases</span>
 
 </div>
 
@@ -65,15 +94,39 @@
 
 </div>
 
-<div class="card">
-
-<h3>5</h3>
-
-<span>Fases</span>
-
 </div>
 
-</div>
+</section>
+
+<section id="planos" class="container">
+
+<h2>Planos Interactivos</h2>
+
+<p>Próximamente se integrarán los planos SVG interactivos.</p>
+
+</section>
+
+<section id="cronograma" class="container">
+
+<h2>Cronograma</h2>
+
+<p>El cronograma Gantt será generado automáticamente desde el archivo JSON.</p>
+
+</section>
+
+<section id="galeria" class="container">
+
+<h2>Galería</h2>
+
+<p>Comparador Antes / Después.</p>
+
+</section>
+
+<section id="propuesta" class="container">
+
+<h2>Propuesta Comercial</h2>
+
+<p>Contenido de la propuesta.</p>
 
 </section>
 
@@ -82,5 +135,3 @@
 <script src="js/app.js"></script>
 
 </body>
-
-</html>
