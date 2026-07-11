@@ -1,0 +1,525 @@
+/* ==========================================================================
+   SEPRECA PROJECT HUB
+   DASHBOARD.CSS
+   Dashboard Ejecutivo
+   ========================================================================== */
+
+/*=========================================================================
+SECCIÓN DASHBOARD
+=========================================================================*/
+
+#dashboard{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:linear-gradient(
+        180deg,
+        #F8FAFC 0%,
+        #EEF5FA 100%
+    );
+
+}
+
+/*=========================================================================
+FONDO DECORATIVO
+=========================================================================*/
+
+#dashboard::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-250px;
+
+    right:-250px;
+
+    width:700px;
+
+    height:700px;
+
+    border-radius:50%;
+
+    background:rgba(0,134,184,.05);
+
+    filter:blur(120px);
+
+}
+
+#dashboard::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:-250px;
+
+    left:-250px;
+
+    width:650px;
+
+    height:650px;
+
+    border-radius:50%;
+
+    background:rgba(151,193,31,.05);
+
+    filter:blur(120px);
+
+}
+
+/*=========================================================================
+GRID KPI
+=========================================================================*/
+
+#dashboard .grid{
+
+    position:relative;
+
+    z-index:5;
+
+    gap:32px;
+
+}
+
+/*=========================================================================
+KPI CARD
+=========================================================================*/
+
+#dashboard .card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:rgba(255,255,255,.82);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.65);
+
+    border-radius:28px;
+
+    padding:40px 30px;
+
+    text-align:center;
+
+    transition:all .35s ease;
+
+    box-shadow:
+        0 15px 35px rgba(15,23,42,.08);
+
+}
+
+/* Barra superior */
+
+#dashboard .card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+}
+
+/* Luz */
+
+#dashboard .card::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:-120px;
+
+    right:-120px;
+
+    width:240px;
+
+    height:240px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.40);
+
+    filter:blur(60px);
+
+}
+
+/*=========================================================================
+HOVER
+=========================================================================*/
+
+#dashboard .card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:
+        0 35px 80px rgba(15,23,42,.18);
+
+}
+
+/*=========================================================================
+COUNTERS
+=========================================================================*/
+
+.counter{
+
+    display:block;
+
+    font-size:4rem;
+
+    font-weight:800;
+
+    color:var(--primary);
+
+    line-height:1;
+
+    margin-bottom:18px;
+
+}
+
+#dashboard p{
+
+    font-size:1rem;
+
+    color:var(--text-light);
+
+    font-weight:600;
+
+}
+
+/*=========================================================================
+ICONO SUPERIOR
+=========================================================================*/
+
+.kpi-icon{
+
+    width:70px;
+
+    height:70px;
+
+    margin:0 auto 24px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:linear-gradient(
+        135deg,
+        rgba(0,134,184,.10),
+        rgba(151,193,31,.12)
+    );
+
+}
+
+.kpi-icon i{
+
+    color:var(--primary);
+
+    font-size:30px;
+
+}
+
+/*=========================================================================
+BADGE
+=========================================================================*/
+
+.kpi-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-top:18px;
+
+    padding:8px 18px;
+
+    border-radius:999px;
+
+    background:rgba(151,193,31,.12);
+
+    color:var(--secondary-dark);
+
+    font-size:.75rem;
+
+    font-weight:700;
+
+    letter-spacing:.08em;
+
+}
+
+/*=========================================================================
+RESUMEN EJECUTIVO
+=========================================================================*/
+
+.dashboard-summary{
+
+    margin-top:80px;
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:35px;
+
+}
+
+.summary-card{
+
+    background:white;
+
+    border-radius:30px;
+
+    padding:40px;
+
+    box-shadow:var(--shadow-md);
+
+}
+
+.summary-card h3{
+
+    margin-bottom:25px;
+
+    color:var(--primary);
+
+}
+
+.summary-card p{
+
+    line-height:1.9;
+
+}
+
+/*=========================================================================
+PROGRESS CARD
+=========================================================================*/
+
+.progress-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(
+        180deg,
+        var(--primary),
+        var(--primary-dark)
+    );
+
+    color:white;
+
+    border-radius:30px;
+
+    padding:40px;
+
+}
+
+.progress-card h3{
+
+    margin-bottom:20px;
+
+}
+
+.progress-circle{
+
+    width:180px;
+
+    height:180px;
+
+    border-radius:50%;
+
+    border:10px solid rgba(255,255,255,.15);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin:20px 0;
+
+    font-size:2.4rem;
+
+    font-weight:800;
+
+}
+
+/*=========================================================================
+TIMELINE
+=========================================================================*/
+
+.dashboard-timeline{
+
+    margin-top:70px;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:24px;
+
+}
+
+.timeline-item{
+
+    background:white;
+
+    padding:28px;
+
+    border-radius:22px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:.35s;
+
+}
+
+.timeline-item:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.timeline-item h4{
+
+    margin-top:18px;
+
+    margin-bottom:10px;
+
+}
+
+.timeline-step{
+
+    width:60px;
+
+    height:60px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:var(--gradient-primary);
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:1.3rem;
+
+    font-weight:700;
+
+}
+
+/*=========================================================================
+RESPONSIVE
+=========================================================================*/
+
+@media(max-width:1200px){
+
+.dashboard-summary{
+
+    grid-template-columns:1fr;
+
+}
+
+.dashboard-timeline{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.counter{
+
+    font-size:3rem;
+
+}
+
+.dashboard-timeline{
+
+    grid-template-columns:1fr;
+
+}
+
+.summary-card{
+
+    padding:30px;
+
+}
+
+.progress-card{
+
+    padding:30px;
+
+}
+
+.progress-circle{
+
+    width:150px;
+
+    height:150px;
+
+}
+
+}
+
+@media(max-width:576px){
+
+#dashboard .card{
+
+    padding:30px 20px;
+
+}
+
+.counter{
+
+    font-size:2.6rem;
+
+}
+
+.progress-circle{
+
+    width:130px;
+
+    height:130px;
+
+    font-size:2rem;
+
+}
+
+}
