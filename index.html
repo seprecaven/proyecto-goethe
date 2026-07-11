@@ -817,82 +817,224 @@
 
     </section>
 
-    <!-- ==========================================================
-         CRONOGRAMA DEL PROYECTO
-    =========================================================== -->
+<!-- ==========================================================
+     CRONOGRAMA EJECUTIVO
+=========================================================== -->
 
-    <section
-        id="cronograma"
-        class="section-soft">
+<section id="cronograma" class="section-soft">
 
-        <div class="container">
+    <div class="container">
 
-            <div
-                class="section-header"
-                data-aos="fade-up">
+        <div
+            class="section-header"
+            data-aos="fade-up">
 
-                <span class="section-tag">
+            <span class="section-tag">
 
-                    PLANIFICACIÓN
+                CRONOGRAMA EJECUTIVO
 
-                </span>
+            </span>
 
-                <h2 class="section-title">
+            <h2 class="section-title">
 
-                    Cronograma General del Proyecto
+                Plan Maestro de Ejecución
 
-                </h2>
+            </h2>
 
-                <p class="section-description">
+            <p class="section-description">
 
-                    El proyecto será ejecutado mediante una planificación
-                    estructurada por actividades, permitiendo controlar el
-                    avance, la duración y los hitos principales de la obra.
+                El proyecto será desarrollado bajo una planificación
+                integral basada en metodología tipo Microsoft Project,
+                permitiendo controlar tiempos, actividades,
+                hitos y porcentaje de avance en tiempo real.
 
-                </p>
+            </p>
 
-            </div>
+        </div>
 
-            <!-- Barra de progreso -->
+        <!-- ==========================================
+             DASHBOARD DEL CRONOGRAMA
+        =========================================== -->
 
-            <div class="project-progress">
+        <div class="gantt-dashboard">
 
-                <div class="project-progress-header">
+            <div class="gantt-kpi">
 
-                    <span>Avance General</span>
+                <small>Duración Total</small>
 
-                    <strong id="project-progress-label">
+                <h3 id="daysTotal">
 
-                        0%
+                    --
 
-                    </strong>
-
-                </div>
-
-                <div class="project-progress-track">
-
-                    <div
-                        id="project-progress-bar"
-                        class="project-progress-fill">
-
-                    </div>
-
-                </div>
+                </h3>
 
             </div>
 
-            <!-- Gantt -->
+            <div class="gantt-kpi">
 
-            <div
-                id="gantt-container"
-                class="gantt-container">
+                <small>Actividades</small>
+
+                <h3 id="activitiesTotal">
+
+                    --
+
+                </h3>
+
+            </div>
+
+            <div class="gantt-kpi">
+
+                <small>Avance</small>
+
+                <h3 id="progressTotal">
+
+                    0%
+
+                </h3>
+
+            </div>
+
+            <div class="gantt-kpi">
+
+                <small>Estado</small>
+
+                <h3 class="status-green">
+
+                    En Planificación
+
+                </h3>
 
             </div>
 
         </div>
 
-    </section>
+        <!-- ==========================================
+             LEYENDA
+        =========================================== -->
 
+        <div class="gantt-legend">
+
+            <div>
+
+                <span class="legend-box completed"></span>
+
+                Completado
+
+            </div>
+
+            <div>
+
+                <span class="legend-box progress"></span>
+
+                En ejecución
+
+            </div>
+
+            <div>
+
+                <span class="legend-box pending"></span>
+
+                Pendiente
+
+            </div>
+
+            <div>
+
+                <span class="legend-box milestone"></span>
+
+                Hito
+
+            </div>
+
+        </div>
+
+        <!-- ==========================================
+             CONTENEDOR PRINCIPAL
+        =========================================== -->
+
+        <div class="gantt-wrapper">
+
+            <!-- Columna izquierda -->
+
+            <div class="gantt-left">
+
+                <div class="gantt-left-header">
+
+                    Actividad
+
+                </div>
+
+                <div id="ganttTasks">
+
+                    <!-- JS -->
+
+                </div>
+
+            </div>
+
+            <!-- Columna derecha -->
+
+            <div class="gantt-right">
+
+                <!-- Escala -->
+
+                <div id="ganttScale">
+
+                </div>
+
+                <!-- Línea del tiempo -->
+
+                <div class="today-line">
+
+                </div>
+
+                <!-- Barras -->
+
+                <div id="ganttBars">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ==========================================
+             PROGRESO
+        =========================================== -->
+
+        <div class="gantt-progress-card">
+
+            <div class="progress-info">
+
+                <span>
+
+                    Avance General del Proyecto
+
+                </span>
+
+                <strong id="progressLabel">
+
+                    0%
+
+                </strong>
+
+            </div>
+
+            <div class="progress-track">
+
+                <div
+                    id="progressFill"
+                    class="progress-fill">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
     <!-- ==========================================================
          PLANOS INTERACTIVOS
     =========================================================== -->
