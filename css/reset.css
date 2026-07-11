@@ -1,1 +1,241 @@
+/* ==========================================================================
+   SEPRECA PROJECT HUB
+   RESET.CSS
+   Reset moderno para navegadores
+   Compatible con GitHub Pages
+   ========================================================================== */
 
+/* Box Model */
+
+*,
+*::before,
+*::after{
+    box-sizing:border-box;
+}
+
+/* Márgenes */
+
+*{
+    margin:0;
+}
+
+/* HTML */
+
+html{
+
+    scroll-behavior:smooth;
+
+    -webkit-text-size-adjust:100%;
+
+    text-size-adjust:100%;
+
+}
+
+/* BODY */
+
+body{
+
+    min-height:100vh;
+
+    text-rendering:optimizeLegibility;
+
+    -webkit-font-smoothing:antialiased;
+
+    -moz-osx-font-smoothing:grayscale;
+
+}
+
+/* Medios */
+
+img,
+picture,
+video,
+canvas,
+svg{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+/* Formularios */
+
+input,
+button,
+textarea,
+select{
+
+    font:inherit;
+
+}
+
+/* Botones */
+
+button{
+
+    cursor:pointer;
+
+    border:none;
+
+    background:none;
+
+}
+
+/* Links */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+/* Listas */
+
+ul,
+ol{
+
+    list-style:none;
+
+}
+
+/* Tablas */
+
+table{
+
+    border-collapse:collapse;
+
+    border-spacing:0;
+
+}
+
+/* Títulos */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+
+    font-weight:inherit;
+
+}
+
+/* Párrafos */
+
+p{
+
+    overflow-wrap:break-word;
+
+}
+
+/* SVG */
+
+svg{
+
+    overflow:visible;
+
+}
+
+/* Campos */
+
+textarea{
+
+    resize:vertical;
+
+}
+
+/* Objetos ocultos */
+
+[hidden]{
+
+    display:none !important;
+
+}
+
+/* Selección */
+
+::selection{
+
+    background:#0086B8;
+
+    color:#ffffff;
+
+}
+
+/* Scrollbar Chrome */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+    height:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#edf2f7;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#0086B8;
+
+    border-radius:50px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#006C94;
+
+}
+
+/* Firefox */
+
+html{
+
+    scrollbar-width:thin;
+
+    scrollbar-color:#0086B8 #edf2f7;
+
+}
+
+/* Focus accesible */
+
+:focus-visible{
+
+    outline:3px solid #97C11F;
+
+    outline-offset:3px;
+
+}
+
+/* Animaciones */
+
+@media (prefers-reduced-motion: reduce){
+
+    html{
+
+        scroll-behavior:auto;
+
+    }
+
+    *,
+    *::before,
+    *::after{
+
+        animation-duration:0.01ms !important;
+
+        animation-iteration-count:1 !important;
+
+        transition-duration:0.01ms !important;
+
+    }
+
+}
