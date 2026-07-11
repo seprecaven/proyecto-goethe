@@ -1,0 +1,1750 @@
+/*=============================================================================
+    SEPRECA PROJECT HUB
+    GANTT.CSS
+    PARTE 1
+    Dashboard + KPIs + Leyenda
+=============================================================================*/
+
+/*=============================================================================
+    SECCIÓN
+=============================================================================*/
+
+#cronograma{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            180deg,
+            #F7FAFC 0%,
+            #EEF5FA 100%
+        );
+
+}
+
+/*=============================================================================
+    FONDO
+=============================================================================*/
+
+#cronograma::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:700px;
+
+    height:700px;
+
+    border-radius:50%;
+
+    background:rgba(0,134,184,.05);
+
+    filter:blur(120px);
+
+    top:-280px;
+
+    right:-250px;
+
+}
+
+#cronograma::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:600px;
+
+    height:600px;
+
+    border-radius:50%;
+
+    background:rgba(151,193,31,.05);
+
+    filter:blur(120px);
+
+    bottom:-250px;
+
+    left:-220px;
+
+}
+
+/*=============================================================================
+    CONTENEDOR
+=============================================================================*/
+
+#cronograma .container{
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+/*=============================================================================
+    DASHBOARD
+=============================================================================*/
+
+.gantt-dashboard{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:28px;
+
+    margin-top:60px;
+
+    margin-bottom:40px;
+
+}
+
+/*=============================================================================
+    KPI
+=============================================================================*/
+
+.gantt-kpi{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:rgba(255,255,255,.82);
+
+    backdrop-filter:blur(22px);
+
+    border-radius:24px;
+
+    border:1px solid rgba(255,255,255,.70);
+
+    padding:34px;
+
+    transition:.35s;
+
+    box-shadow:
+
+        0 15px 35px rgba(15,23,42,.08);
+
+}
+
+/* Barra superior */
+
+.gantt-kpi::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            var(--primary),
+
+            var(--secondary)
+
+        );
+
+}
+
+/* Luz */
+
+.gantt-kpi::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+
+    height:220px;
+
+    border-radius:50%;
+
+    background:
+
+        rgba(255,255,255,.45);
+
+    top:-120px;
+
+    right:-120px;
+
+    filter:blur(50px);
+
+}
+
+.gantt-kpi:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+
+        0 30px 60px rgba(15,23,42,.15);
+
+}
+
+.gantt-kpi small{
+
+    display:block;
+
+    color:var(--text-light);
+
+    text-transform:uppercase;
+
+    letter-spacing:.08em;
+
+    font-size:.75rem;
+
+    margin-bottom:12px;
+
+    font-weight:700;
+
+}
+
+.gantt-kpi h3{
+
+    color:var(--primary);
+
+    font-size:2.4rem;
+
+    font-weight:800;
+
+    line-height:1;
+
+}
+
+/*=============================================================================
+    ESTADOS
+=============================================================================*/
+
+.status-green{
+
+    color:#28A745 !important;
+
+}
+
+.status-yellow{
+
+    color:#FFC107 !important;
+
+}
+
+.status-red{
+
+    color:#DC3545 !important;
+
+}
+
+/*=============================================================================
+    LEYENDA
+=============================================================================*/
+
+.gantt-legend{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:40px;
+
+    margin-bottom:40px;
+
+    padding:26px;
+
+    border-radius:22px;
+
+    background:white;
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+.gantt-legend div{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-size:.90rem;
+
+    font-weight:600;
+
+    color:var(--text);
+
+}
+
+/*=============================================================================
+    CAJAS
+=============================================================================*/
+
+.legend-box{
+
+    width:22px;
+
+    height:22px;
+
+    border-radius:6px;
+
+    display:inline-block;
+
+}
+
+.completed{
+
+    background:#2ECC71;
+
+}
+
+.progress{
+
+    background:#0086B8;
+
+}
+
+.pending{
+
+    background:#D6D9DD;
+
+}
+
+.milestone{
+
+    width:18px;
+
+    height:18px;
+
+    transform:rotate(45deg);
+
+    background:#F5A623;
+
+    border-radius:2px;
+
+}
+
+/*=============================================================================
+    TARJETA DE PROGRESO
+=============================================================================*/
+
+.gantt-progress-card{
+
+    margin-top:50px;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:26px;
+
+    box-shadow:var(--shadow-md);
+
+}
+
+.progress-info{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:18px;
+
+}
+
+.progress-info span{
+
+    font-weight:600;
+
+    color:var(--text);
+
+}
+
+.progress-info strong{
+
+    color:var(--primary);
+
+    font-size:1.2rem;
+
+}
+
+.progress-track{
+
+    width:100%;
+
+    height:14px;
+
+    background:#E6ECF2;
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+}
+
+.progress-fill{
+
+    width:0;
+
+    height:100%;
+
+    border-radius:999px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            var(--secondary),
+
+            var(--primary)
+
+        );
+
+    transition:width .8s ease;
+
+}
+
+/*=============================================================================
+    EFECTO PREMIUM
+=============================================================================*/
+
+.gantt-dashboard,
+.gantt-legend,
+.gantt-progress-card{
+
+    animation:fadeGantt .9s ease;
+
+}
+
+@keyframes fadeGantt{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*=============================================================================
+    GANTT.CSS
+    PARTE 2
+    Estructura Principal del Cronograma
+=============================================================================*/
+
+
+/*=============================================================================
+    CONTENEDOR PRINCIPAL
+=============================================================================*/
+
+.gantt-wrapper{
+
+    position:relative;
+
+    display:grid;
+
+    grid-template-columns:340px 1fr;
+
+    width:100%;
+
+    min-height:650px;
+
+    background:#FFFFFF;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    box-shadow:
+
+        0 25px 60px rgba(15,23,42,.10);
+
+}
+
+
+/*=============================================================================
+    PANEL IZQUIERDO
+=============================================================================*/
+
+.gantt-left{
+
+    position:relative;
+
+    z-index:5;
+
+    background:#FFFFFF;
+
+    border-right:1px solid #E7EDF3;
+
+}
+
+
+/*=============================================================================
+    ENCABEZADO IZQUIERDO
+=============================================================================*/
+
+.gantt-left-header{
+
+    position:sticky;
+
+    top:0;
+
+    height:70px;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:0 28px;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        #0A6A8D
+    );
+
+    color:#FFFFFF;
+
+    font-size:.95rem;
+
+    font-weight:700;
+
+    letter-spacing:.08em;
+
+    text-transform:uppercase;
+
+    z-index:20;
+
+}
+
+
+/*=============================================================================
+    LISTA DE ACTIVIDADES
+=============================================================================*/
+
+#ganttTasks{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+/*=============================================================================
+    FILA ACTIVIDAD
+=============================================================================*/
+
+.gantt-task{
+
+    display:flex;
+
+    align-items:center;
+
+    height:58px;
+
+    padding:0 28px;
+
+    border-bottom:1px solid #EEF3F8;
+
+    transition:.25s;
+
+    background:#FFFFFF;
+
+}
+
+
+.gantt-task:hover{
+
+    background:#F7FBFE;
+
+}
+
+
+.gantt-task span{
+
+    font-size:.93rem;
+
+    font-weight:600;
+
+    color:var(--text);
+
+}
+
+
+/*=============================================================================
+    PANEL DERECHO
+=============================================================================*/
+
+.gantt-right{
+
+    position:relative;
+
+    overflow:auto;
+
+    background:#FCFDFE;
+
+}
+
+
+/*=============================================================================
+    SCROLL
+=============================================================================*/
+
+.gantt-right::-webkit-scrollbar{
+
+    height:12px;
+
+    width:12px;
+
+}
+
+.gantt-right::-webkit-scrollbar-track{
+
+    background:#E8EEF3;
+
+}
+
+.gantt-right::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:20px;
+
+}
+
+
+/*=============================================================================
+    ESCALA SUPERIOR
+=============================================================================*/
+
+#ganttScale{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:30;
+
+    display:flex;
+
+    min-width:1400px;
+
+    height:70px;
+
+    background:#FFFFFF;
+
+    border-bottom:1px solid #E7EDF3;
+
+}
+
+
+/*=============================================================================
+    MESES
+=============================================================================*/
+
+.gantt-month{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-width:280px;
+
+    border-right:1px solid #EEF3F8;
+
+    font-size:.88rem;
+
+    font-weight:700;
+
+    color:var(--primary);
+
+    background:#F9FBFD;
+
+}
+
+
+/*=============================================================================
+    SEMANAS
+=============================================================================*/
+
+.gantt-week{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-width:70px;
+
+    height:38px;
+
+    border-right:1px solid #EEF3F8;
+
+    font-size:.75rem;
+
+    color:var(--text-light);
+
+}
+
+
+/*=============================================================================
+    ÁREA DE BARRAS
+=============================================================================*/
+
+#ganttBars{
+
+    position:relative;
+
+    min-width:1400px;
+
+    min-height:580px;
+
+    background-image:
+
+        linear-gradient(
+
+            to right,
+
+            rgba(15,23,42,.05) 1px,
+
+            transparent 1px
+
+        ),
+
+        linear-gradient(
+
+            to bottom,
+
+            rgba(15,23,42,.05) 1px,
+
+            transparent 1px
+
+        );
+
+    background-size:
+
+        70px 100%,
+
+        100% 58px;
+
+}
+
+
+/*=============================================================================
+    FILA HORIZONTAL
+=============================================================================*/
+
+.gantt-row{
+
+    position:relative;
+
+    height:58px;
+
+    border-bottom:1px solid #EEF3F8;
+
+}
+
+
+/*=============================================================================
+    COLUMNAS VERTICALES
+=============================================================================*/
+
+.gantt-column{
+
+    position:absolute;
+
+    top:0;
+
+    bottom:0;
+
+    width:70px;
+
+    border-right:1px solid rgba(15,23,42,.05);
+
+}
+
+
+/*=============================================================================
+    EFECTO HOVER FILA
+=============================================================================*/
+
+.gantt-row:hover{
+
+    background:rgba(0,134,184,.03);
+
+}
+
+
+/*=============================================================================
+    SOMBRA ENTRE PANELES
+=============================================================================*/
+
+.gantt-left::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    right:-12px;
+
+    width:12px;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        90deg,
+
+        rgba(0,0,0,.08),
+
+        transparent
+
+    );
+
+}
+
+
+/*=============================================================================
+    CABECERA FIJA
+=============================================================================*/
+
+.gantt-left-header,
+#ganttScale{
+
+    box-shadow:
+
+        0 3px 12px rgba(15,23,42,.05);
+
+}
+
+
+/*=============================================================================
+    PREPARACIÓN PARA JS
+=============================================================================*/
+
+.gantt-bar-layer{
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+}
+
+
+.gantt-event-layer{
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+}
+
+/*=============================================================================
+    GANTT.CSS
+    PARTE 3
+    Barras • Hitos • Línea HOY • Animaciones
+=============================================================================*/
+
+/*=============================================================================
+    CAPA DE BARRAS
+=============================================================================*/
+
+.gantt-bar{
+
+    position:absolute;
+
+    height:24px;
+
+    top:17px;
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    transition:all .35s ease;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.12);
+
+}
+
+/*=============================================================================
+    EFECTO HOVER
+=============================================================================*/
+
+.gantt-bar:hover{
+
+    transform:translateY(-2px) scale(1.02);
+
+    box-shadow:
+        0 16px 30px rgba(0,0,0,.18);
+
+    z-index:20;
+
+}
+
+/*=============================================================================
+    TIPOS DE BARRA
+=============================================================================*/
+
+.gantt-bar.completed{
+
+    background:linear-gradient(
+        90deg,
+        #28C76F,
+        #20A45A
+    );
+
+}
+
+.gantt-bar.progress{
+
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        #00A9E0
+    );
+
+}
+
+.gantt-bar.pending{
+
+    background:linear-gradient(
+        90deg,
+        #D6D9DD,
+        #BFC5CB
+    );
+
+}
+
+.gantt-bar.delayed{
+
+    background:linear-gradient(
+        90deg,
+        #E74C3C,
+        #C0392B
+    );
+
+}
+
+/*=============================================================================
+    BRILLO
+=============================================================================*/
+
+.gantt-bar::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-40%;
+
+    width:40%;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.45),
+
+        transparent
+
+    );
+
+    animation:ganttShine 4s linear infinite;
+
+}
+
+@keyframes ganttShine{
+
+    from{
+
+        left:-40%;
+
+    }
+
+    to{
+
+        left:120%;
+
+    }
+
+}
+
+/*=============================================================================
+    PROGRESO INTERNO
+=============================================================================*/
+
+.gantt-progress{
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    height:100%;
+
+    background:rgba(255,255,255,.25);
+
+    border-radius:999px;
+
+}
+
+/*=============================================================================
+    TEXTO
+=============================================================================*/
+
+.gantt-label{
+
+    position:absolute;
+
+    left:12px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#FFF;
+
+    font-size:.74rem;
+
+    font-weight:700;
+
+    white-space:nowrap;
+
+    text-shadow:0 1px 2px rgba(0,0,0,.35);
+
+}
+
+/*=============================================================================
+    HITO
+=============================================================================*/
+
+.gantt-milestone{
+
+    position:absolute;
+
+    width:18px;
+
+    height:18px;
+
+    top:20px;
+
+    transform:rotate(45deg);
+
+    background:#F5A623;
+
+    border:2px solid #FFF;
+
+    box-shadow:
+
+        0 6px 18px rgba(245,166,35,.35);
+
+    z-index:30;
+
+}
+
+.gantt-milestone:hover{
+
+    transform:rotate(45deg) scale(1.2);
+
+}
+
+/*=============================================================================
+    LÍNEA HOY
+=============================================================================*/
+
+.today-line{
+
+    position:absolute;
+
+    top:0;
+
+    bottom:0;
+
+    width:3px;
+
+    background:#E53935;
+
+    z-index:40;
+
+    pointer-events:none;
+
+}
+
+.today-line::before{
+
+    content:"HOY";
+
+    position:absolute;
+
+    top:8px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    background:#E53935;
+
+    color:#FFF;
+
+    font-size:.68rem;
+
+    font-weight:700;
+
+    padding:4px 8px;
+
+    border-radius:999px;
+
+    letter-spacing:.08em;
+
+}
+
+.today-line::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    background:#E53935;
+
+}
+
+/*=============================================================================
+    TOOLTIP
+=============================================================================*/
+
+.gantt-tooltip{
+
+    position:absolute;
+
+    min-width:240px;
+
+    padding:18px;
+
+    background:#081B28;
+
+    color:#FFF;
+
+    border-radius:16px;
+
+    box-shadow:
+
+        0 18px 40px rgba(0,0,0,.25);
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:.25s;
+
+    z-index:999;
+
+}
+
+.gantt-tooltip.active{
+
+    opacity:1;
+
+}
+
+.gantt-tooltip h4{
+
+    margin-bottom:10px;
+
+    font-size:1rem;
+
+}
+
+.gantt-tooltip p{
+
+    font-size:.82rem;
+
+    line-height:1.6;
+
+    color:rgba(255,255,255,.75);
+
+}
+
+/*=============================================================================
+    ANIMACIÓN DE ENTRADA
+=============================================================================*/
+
+.gantt-bar{
+
+    animation:barGrow .9s ease forwards;
+
+    transform-origin:left center;
+
+}
+
+@keyframes barGrow{
+
+    from{
+
+        opacity:0;
+
+        transform:scaleX(.05);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scaleX(1);
+
+    }
+
+}
+
+/*=============================================================================
+    RESALTAR FILA
+=============================================================================*/
+
+.gantt-row.active{
+
+    background:rgba(0,134,184,.08);
+
+}
+
+.gantt-task.active{
+
+    background:rgba(0,134,184,.08);
+
+    font-weight:700;
+
+}
+
+/*=============================================================================
+    DURACIÓN
+=============================================================================*/
+
+.gantt-duration{
+
+    position:absolute;
+
+    right:10px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#FFF;
+
+    font-size:.70rem;
+
+    font-weight:600;
+
+}
+
+/*=============================================================================
+    SOMBRA DEL PANEL
+=============================================================================*/
+
+#ganttBars{
+
+    box-shadow:
+
+        inset 0 0 30px rgba(0,0,0,.03);
+
+}
+
+/*=============================================================================
+    EFECTO GLASS
+=============================================================================*/
+
+.gantt-wrapper{
+
+    backdrop-filter:blur(18px);
+
+}
+
+/*=============================================================================
+    ESTADO SELECCIONADO
+=============================================================================*/
+
+.gantt-bar.selected{
+
+    outline:3px solid rgba(255,255,255,.65);
+
+    z-index:50;
+
+}
+
+/*=============================================================================
+    GANTT.CSS
+    PARTE 4
+    Responsive • Accesibilidad • Optimización Final
+=============================================================================*/
+
+
+/*=============================================================================
+    SCROLL SUAVE
+=============================================================================*/
+
+.gantt-right{
+
+    scroll-behavior:smooth;
+
+}
+
+
+/*=============================================================================
+    SOMBRA INTERIOR
+=============================================================================*/
+
+.gantt-wrapper{
+
+    position:relative;
+
+}
+
+.gantt-wrapper::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:28px;
+
+    pointer-events:none;
+
+    box-shadow:
+
+        inset 0 1px 0 rgba(255,255,255,.65),
+
+        inset 0 -1px 0 rgba(0,0,0,.03);
+
+}
+
+
+/*=============================================================================
+    EFECTO PREMIUM EN GRID
+=============================================================================*/
+
+#ganttBars{
+
+    background-color:#FCFDFE;
+
+    background-image:
+
+        linear-gradient(
+
+            rgba(0,134,184,.035) 1px,
+
+            transparent 1px
+
+        ),
+
+        linear-gradient(
+
+            90deg,
+
+            rgba(0,134,184,.035) 1px,
+
+            transparent 1px
+
+        );
+
+    background-size:
+
+        70px 58px;
+
+}
+
+
+/*=============================================================================
+    EFECTO HOVER GENERAL
+=============================================================================*/
+
+.gantt-wrapper:hover{
+
+    box-shadow:
+
+        0 30px 80px rgba(15,23,42,.14);
+
+}
+
+
+/*=============================================================================
+    ANIMACIÓN DE APARICIÓN
+=============================================================================*/
+
+.gantt-wrapper{
+
+    animation:ganttAppear .8s ease;
+
+}
+
+@keyframes ganttAppear{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/*=============================================================================
+    SCROLLBAR GENERAL
+=============================================================================*/
+
+#ganttBars::-webkit-scrollbar,
+#ganttScale::-webkit-scrollbar{
+
+    height:12px;
+
+}
+
+#ganttBars::-webkit-scrollbar-thumb,
+#ganttScale::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:20px;
+
+}
+
+
+/*=============================================================================
+    IMPRESIÓN
+=============================================================================*/
+
+@media print{
+
+    .gantt-wrapper{
+
+        overflow:visible;
+
+        box-shadow:none;
+
+    }
+
+    .today-line{
+
+        display:none;
+
+    }
+
+}
+
+
+/*=============================================================================
+    PANTALLAS XL
+=============================================================================*/
+
+@media(min-width:1800px){
+
+    .gantt-wrapper{
+
+        grid-template-columns:420px 1fr;
+
+    }
+
+    .gantt-left-header{
+
+        height:80px;
+
+        font-size:1rem;
+
+    }
+
+    .gantt-task{
+
+        height:64px;
+
+    }
+
+    .gantt-row{
+
+        height:64px;
+
+    }
+
+    .gantt-bar{
+
+        top:20px;
+
+    }
+
+}
+
+
+/*=============================================================================
+    DESKTOP
+=============================================================================*/
+
+@media(max-width:1400px){
+
+    .gantt-dashboard{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+
+/*=============================================================================
+    TABLET GRANDE
+=============================================================================*/
+
+@media(max-width:1100px){
+
+    .gantt-wrapper{
+
+        grid-template-columns:280px 1fr;
+
+    }
+
+    .gantt-left-header{
+
+        padding:0 20px;
+
+    }
+
+    .gantt-task{
+
+        padding:0 20px;
+
+    }
+
+}
+
+
+/*=============================================================================
+    TABLET
+=============================================================================*/
+
+@media(max-width:992px){
+
+    .gantt-dashboard{
+
+        grid-template-columns:1fr 1fr;
+
+    }
+
+    .gantt-legend{
+
+        justify-content:flex-start;
+
+        gap:20px;
+
+    }
+
+}
+
+
+/*=============================================================================
+    MÓVIL
+=============================================================================*/
+
+@media(max-width:768px){
+
+    .gantt-dashboard{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .gantt-wrapper{
+
+        display:block;
+
+        overflow:auto;
+
+    }
+
+    .gantt-left{
+
+        width:260px;
+
+        float:left;
+
+    }
+
+    .gantt-right{
+
+        overflow:auto;
+
+    }
+
+    #ganttScale{
+
+        min-width:1200px;
+
+    }
+
+    #ganttBars{
+
+        min-width:1200px;
+
+    }
+
+}
+
+
+/*=============================================================================
+    MÓVIL PEQUEÑO
+=============================================================================*/
+
+@media(max-width:576px){
+
+    .gantt-kpi{
+
+        padding:24px;
+
+    }
+
+    .gantt-kpi h3{
+
+        font-size:2rem;
+
+    }
+
+    .gantt-progress-card{
+
+        padding:24px;
+
+    }
+
+    .progress-info{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:10px;
+
+    }
+
+    .gantt-left{
+
+        width:220px;
+
+    }
+
+    .gantt-left-header{
+
+        font-size:.80rem;
+
+    }
+
+    .gantt-task span{
+
+        font-size:.80rem;
+
+    }
+
+}
+
+
+/*=============================================================================
+    ACCESIBILIDAD
+=============================================================================*/
+
+.gantt-bar:focus-visible,
+
+.gantt-task:focus-visible{
+
+    outline:3px solid var(--secondary);
+
+    outline-offset:3px;
+
+}
+
+
+/*=============================================================================
+    REDUCCIÓN DE MOVIMIENTO
+=============================================================================*/
+
+@media(prefers-reduced-motion:reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+        scroll-behavior:auto !important;
+
+    }
+}
+
+/*=============================================================================
+    FIN DEL ARCHIVO
+=============================================================================*/
