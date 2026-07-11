@@ -3,37 +3,110 @@
 
 <head>
 
+    <!-- ==========================================================
+         METADATOS
+    =========================================================== -->
+
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Proyecto Alemania | Goethe Institut Caracas | SEPRECA</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-        content="Proyecto de Remodelación Integral del Goethe Institut Caracas desarrollado por SEPRECA.">
+    <meta
+        http-equiv="X-UA-Compatible"
+        content="IE=edge">
 
-    <meta name="author" content="SEPRECA">
+    <title>
+        Proyecto Goethe Institut | SEPRECA
+    </title>
 
-    <meta name="theme-color" content="#0086B8">
+    <meta
+        name="description"
+        content="Presentación ejecutiva de la propuesta de remodelación integral del Goethe Institut desarrollada por SEPRECA.">
 
-    <link rel="icon" href="assets/favicon.png">
+    <meta
+        name="keywords"
+        content="SEPRECA, Goethe Institut, Remodelación, Ingeniería, Arquitectura, Construcción">
 
-    <!-- Google Fonts -->
+    <meta
+        name="author"
+        content="SEPRECA">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta
+        name="theme-color"
+        content="#0086B8">
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- ==========================================================
+         OPEN GRAPH
+    =========================================================== -->
+
+    <meta property="og:type" content="website">
+
+    <meta
+        property="og:title"
+        content="Proyecto Goethe Institut | SEPRECA">
+
+    <meta
+        property="og:description"
+        content="Propuesta integral de remodelación del Goethe Institut.">
+
+    <meta
+        property="og:image"
+        content="assets/social-preview.jpg">
+
+    <meta
+        property="og:url"
+        content="https://seprecaven.github.io/proyecto-goethe/">
+
+    <!-- ==========================================================
+         FAVICON
+    =========================================================== -->
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="assets/favicon.png">
+
+    <!-- ==========================================================
+         GOOGLE FONTS
+    =========================================================== -->
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
 
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
-    <!-- FontAwesome -->
+    <!-- ==========================================================
+         FONT AWESOME
+    =========================================================== -->
 
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer">
 
-    <!-- CSS -->
+    <!-- ==========================================================
+         AOS ANIMATION
+    =========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+    <!-- ==========================================================
+         CSS DEL PROYECTO
+    =========================================================== -->
+
+    <link rel="stylesheet" href="css/reset.css">
 
     <link rel="stylesheet" href="css/variables.css">
 
@@ -43,15 +116,11 @@
 
     <link rel="stylesheet" href="css/dashboard.css">
 
-    <link rel="stylesheet" href="css/floorplan.css">
-
     <link rel="stylesheet" href="css/gantt.css">
 
     <link rel="stylesheet" href="css/gallery.css">
 
-    <link rel="stylesheet" href="css/components.css">
-
-    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/footer.css">
 
     <link rel="stylesheet" href="css/responsive.css">
 
@@ -59,965 +128,1348 @@
 
 <body>
 
-    <!-- =====================================================
-        SPLASH SCREEN
-    ====================================================== -->
+    <!-- ==========================================================
+         SPLASH SCREEN
+    =========================================================== -->
 
-    <div id="splash-screen">
+    <div id="loader">
 
-        <div class="splash-content">
+        <div class="loader-content">
 
-            <img src="assets/logo-sepreca.png"
-                alt="SEPRECA"
-                class="splash-logo">
+            <img
+                src="assets/logo-sepreca.png"
+                alt="SEPRECA">
 
-            <h1>
+            <div class="loader-line"></div>
 
-                PROYECTO ALEMANIA
-
-            </h1>
-
-            <p>
-
-                Goethe Institut Caracas
-
-            </p>
-
-            <div class="loader"></div>
+            <p>Cargando presentación ejecutiva...</p>
 
         </div>
 
     </div>
 
-    <!-- =====================================================
-        APLICACIÓN
-    ====================================================== -->
+    <!-- ==========================================================
+         TOP BAR
+    =========================================================== -->
 
-    <div id="app">
+    <div class="topbar">
 
-        <!-- =====================================================
-            TOP BAR
-        ====================================================== -->
+        <div class="container">
 
-        <section class="topbar">
+            <div class="topbar-left">
 
-            <div class="container topbar-grid">
-
-                <div>
+                <div class="topbar-item">
 
                     <i class="fa-solid fa-location-dot"></i>
 
-                    Caracas • Venezuela
+                    <span>Caracas • Venezuela</span>
 
                 </div>
 
-                <div>
-
-                    <i class="fa-solid fa-calendar-days"></i>
-
-                    Proyecto 2025
-
-                </div>
-
-                <div>
+                <div class="topbar-item">
 
                     <i class="fa-solid fa-building"></i>
 
-                    Goethe Institut Caracas
+                    <span>Proyecto Goethe Institut</span>
 
                 </div>
 
-                <div>
+            </div>
 
-                    <i class="fa-solid fa-hard-hat"></i>
+            <div class="topbar-right">
 
-                    Remodelación Integral
+                <div class="topbar-item">
+
+                    <i class="fa-solid fa-calendar"></i>
+
+                    <span>Propuesta Ejecutiva</span>
 
                 </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ==========================================================
+         HEADER
+    =========================================================== -->
+
+    <header class="header">
+
+        <div class="hero-light-left"></div>
+
+        <div class="hero-light-right"></div>
+
+        <div class="hero-grid-overlay"></div>
+
+        <div class="hero-circle circle-1"></div>
+
+        <div class="hero-circle circle-2"></div>
+
+        <!-- ======================================================
+             NAVBAR
+        ======================================================= -->
+
+        <nav class="navbar">
+
+            <div class="container">
+
+                <a href="#" class="logo">
+
+                    <img
+                        src="assets/logo-sepreca.png"
+                        alt="SEPRECA">
+
+                </a>
+
+                <div class="menu">
+
+                    <a href="#introduccion">Introducción</a>
+
+                    <a href="#beneficios">Beneficios</a>
+
+                    <a href="#cronograma">Cronograma</a>
+
+                    <a href="#planos">Planos</a>
+
+                    <a href="#galeria">Galería</a>
+
+                    <a href="#pagos">Pagos</a>
+
+                </div>
+
+                <button class="nav-toggle">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+            </div>
+
+        </nav>
+
+        <!-- ======================================================
+             HERO
+        ======================================================= -->
+
+        <section class="hero">
+
+            <div class="container hero-grid">
+
+                <!-- ==============================================
+                     HERO CONTENT
+                =============================================== -->
+
+                <div
+                    class="hero-content"
+                    data-aos="fade-right">
+
+                    <div class="hero-badge">
+
+                        <i class="fa-solid fa-award"></i>
+
+                        PROPUESTA EJECUTIVA
+
+                    </div>
+
+                    <h1 class="hero-title">
+
+                        Remodelación Integral del
+
+                        <span>Goethe Institut</span>
+
+                    </h1>
+
+                    <p class="hero-description">
+
+                        Presentación ejecutiva desarrollada por
+                        <strong>SEPRECA</strong>
+                        para la renovación integral de las instalaciones,
+                        incorporando criterios de ingeniería,
+                        arquitectura,
+                        funcionalidad,
+                        sostenibilidad
+                        y control de ejecución mediante una metodología
+                        de planificación profesional.
+
+                    </p>
+
+                    <div class="hero-actions">
+
+                        <a
+                            href="#cronograma"
+                            class="btn btn-primary">
+
+                            Ver Cronograma
+
+                        </a>
+
+                        <a
+                            href="#planos"
+                            class="btn btn-secondary">
+
+                            Explorar Planos
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- ==============================================
+                     HERO PANEL
+                =============================================== -->
+
+                <div
+                    class="hero-panel"
+                    data-aos="fade-left">
+
+                    <div class="floating-badge badge-top">
+
+                        <i class="fa-solid fa-clock"></i>
+
+                        <span>Proyecto Planificado</span>
+
+                    </div>
+
+                    <div class="executive-card">
+
+                        <div class="executive-header">
+
+                            <div class="executive-label">
+
+                                SEPRECA
+
+                            </div>
+
+                            <h3>
+
+                                Resumen Ejecutivo
+
+                            </h3>
+
+                            <p>
+
+                                Proyecto de remodelación integral,
+                                organizado mediante planificación técnica,
+                                cronograma de ejecución y control de calidad.
+
+                            </p>
+
+                        </div>
+
+                        <div class="executive-body">
+
+                            <div class="stat-box">
+
+                                <span class="stat-number">
+
+                                    2
+
+                                </span>
+
+                                <span class="stat-label">
+
+                                    Plantas
+
+                                </span>
+
+                            </div>
+
+                            <div class="stat-box">
+
+                                <span class="stat-number">
+
+                                    10+
+
+                                </span>
+
+                                <span class="stat-label">
+
+                                    Áreas
+
+                                </span>
+
+                            </div>
+
+                            <div class="stat-box">
+
+                                <span class="stat-number">
+
+                                    3
+
+                                </span>
+
+                                <span class="stat-label">
+
+                                    Etapas
+
+                                </span>
+
+                            </div>
+
+                            <div class="stat-box">
+
+                                <span class="stat-number">
+
+                                    100%
+
+                                </span>
+
+                                <span class="stat-label">
+
+                                    Supervisión
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="executive-footer">
+
+                            <div class="progress-header">
+
+                                <span>
+
+                                    Avance del Proyecto
+
+                                </span>
+
+                                <span id="progressPercent">
+
+                                    0%
+
+                                </span>
+
+                            </div>
+
+                            <div class="progress-bar">
+
+                                <div
+                                    class="progress-value"
+                                    id="projectProgress">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="floating-badge badge-bottom">
+
+                        <i class="fa-solid fa-medal"></i>
+
+                        <span>Calidad Garantizada</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="scroll-indicator">
+
+                <span>Scroll</span>
+
+                <div class="mouse"></div>
 
             </div>
 
         </section>
 
-        <!-- =====================================================
-            HEADER
-        ====================================================== -->
+    </header>
 
-        <header class="header">
+    <!-- ==========================================================
+         MAIN
+    =========================================================== -->
 
-            <nav class="navbar container">
+    <main>
 
-                <a href="#hero" class="logo">
+    <!-- ==========================================================
+         INTRODUCCIÓN
+    =========================================================== -->
 
-                    <img src="assets/logo-sepreca.png"
-                        alt="SEPRECA">
+    <section
+        id="introduccion"
+        class="section-light">
 
-                </a>
+        <div class="container">
 
-                <ul class="menu">
+            <div
+                class="section-header"
+                data-aos="fade-up">
 
-                    <li>
+                <span class="section-tag">
 
-                        <a href="#dashboard">
+                    PROPUESTA
 
-                            Dashboard
+                </span>
 
-                        </a>
+                <h2 class="section-title">
 
-                    </li>
+                    Una intervención diseñada para transformar los espacios del Goethe Institut
 
-                    <li>
+                </h2>
 
-                        <a href="#planos">
+                <p class="section-description">
 
-                            Planos
+                    SEPRECA presenta una propuesta integral para la remodelación de las instalaciones del Goethe Institut,
+                    orientada a optimizar la funcionalidad, mejorar la experiencia de los usuarios y modernizar los espacios
+                    mediante soluciones constructivas de alta calidad, una planificación rigurosa y una ejecución controlada.
 
-                        </a>
-
-                    </li>
-
-                    <li>
-
-                        <a href="#cronograma">
-
-                            Cronograma
-
-                        </a>
-
-                    </li>
-
-                    <li>
-
-                        <a href="#galeria">
-
-                            Galería
-
-                        </a>
-
-                    </li>
-
-                    <li>
-
-                        <a href="#propuesta">
-
-                            Propuesta
-
-                        </a>
-
-                    </li>
-
-                    <li>
-
-                        <a href="#pagos">
-
-                            Pagos
-
-                        </a>
-
-                    </li>
-
-                </ul>
-
-            </nav>
-
-            <!-- =====================================================
-                HERO
-            ====================================================== -->
-
-            <section id="hero">
-
-                <div class="hero-overlay"></div>
-
-                <div class="container hero-grid">
-
-                    <div class="hero-info">
-
-                        <span class="tag">
-
-                            PRESENTACIÓN EJECUTIVA
-
-                        </span>
-
-                        <h1>
-
-                            Remodelación Integral
-
-                            <span>
-
-                                Goethe Institut Caracas
-
-                            </span>
-
-                        </h1>
-
-                        <p>
-
-                            Proyecto desarrollado por SEPRECA para la ejecución
-                            integral de adecuaciones arquitectónicas,
-                            remodelaciones interiores, rehabilitación de espacios,
-                            acabados, instalaciones sanitarias, eléctricas y
-                            optimización funcional del edificio.
-
-                        </p>
-
-                        <div class="hero-buttons">
-
-                            <a href="#dashboard" class="btn btn-primary">
-
-                                Ver Dashboard
-
-                            </a>
-
-                            <a href="#propuesta" class="btn btn-outline">
-
-                                Ver Propuesta
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                    <div class="hero-card">
-
-                        <div class="project-card">
-
-                            <div class="project-header">
-
-                                <h3>
-
-                                    Resumen Ejecutivo
-
-                                </h3>
-
-                            </div>
-
-                            <div class="project-body">
-
-                                <div class="metric">
-
-                                    <span class="metric-number">
-
-                                        30
-
-                                    </span>
-
-                                    <span class="metric-label">
-
-                                        Días Hábiles
-
-                                    </span>
-
-                                </div>
-
-                                <div class="metric">
-
-                                    <span class="metric-number">
-
-                                        9
-
-                                    </span>
-
-                                    <span class="metric-label">
-
-                                        Áreas
-
-                                    </span>
-
-                                </div>
-
-                                <div class="metric">
-
-                                    <span class="metric-number">
-
-                                        5
-
-                                    </span>
-
-                                    <span class="metric-label">
-
-                                        Fases
-
-                                    </span>
-
-                                </div>
-
-                                <div class="metric">
-
-                                    <span class="metric-number">
-
-                                        8
-
-                                    </span>
-
-                                    <span class="metric-label">
-
-                                        Especialistas
-
-                                    </span>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-        </header>
-
-        <!-- =====================================================
-            CONTENIDO PRINCIPAL
-        ====================================================== -->
-
-        <main>
-
-            <!-- =====================================================
-                DASHBOARD EJECUTIVO
-            ====================================================== -->
-
-            <section id="dashboard" class="section">
-
-                <div class="container">
-
-                    <div class="section-header">
-
-                        <span class="section-tag">
-                            Dashboard Ejecutivo
-                        </span>
-
-                        <h2>
-                            Estado General del Proyecto
-                        </h2>
-
-                        <p>
-                            Indicadores principales para el seguimiento de la
-                            remodelación integral del Goethe Institut Caracas.
-                        </p>
-
-                    </div>
-
-                    <div class="kpi-grid">
-
-                        <article class="kpi-card">
-
-                            <div class="kpi-icon">
-                                <i class="fa-solid fa-calendar-days"></i>
-                            </div>
-
-                            <h3 id="kpi-days">30</h3>
-
-                            <p>Días Hábiles</p>
-
-                        </article>
-
-                        <article class="kpi-card">
-
-                            <div class="kpi-icon">
-                                <i class="fa-solid fa-building"></i>
-                            </div>
-
-                            <h3 id="kpi-areas">9</h3>
-
-                            <p>Áreas de Trabajo</p>
-
-                        </article>
-
-                        <article class="kpi-card">
-
-                            <div class="kpi-icon">
-                                <i class="fa-solid fa-users"></i>
-                            </div>
-
-                            <h3 id="kpi-workers">8</h3>
-
-                            <p>Especialistas</p>
-
-                        </article>
-
-                        <article class="kpi-card">
-
-                            <div class="kpi-icon">
-                                <i class="fa-solid fa-layer-group"></i>
-                            </div>
-
-                            <h3 id="kpi-phases">5</h3>
-
-                            <p>Fases del Proyecto</p>
-
-                        </article>
-
-                    </div>
-
-                    <div class="progress-panel">
-
-                        <div class="progress-info">
-
-                            <div>
-
-                                <h3>
-
-                                    Avance General
-
-                                </h3>
-
-                                <p>
-
-                                    El porcentaje de avance será calculado automáticamente
-                                    a partir del cronograma.
-
-                                </p>
-
-                            </div>
-
-                            <span id="progressValue">
-
-                                0%
-
-                            </span>
-
-                        </div>
-
-                        <div class="progress-bar">
-
-                            <div id="progressFill"></div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-            <!-- =====================================================
-                PLANOS INTERACTIVOS
-            ====================================================== -->
-
-            <section id="planos" class="section">
-
-                <div class="container">
-
-                    <div class="section-header">
-
-                        <span class="section-tag">
-
-                            Planos
-
-                        </span>
-
-                        <h2>
-
-                            Plano Arquitectónico Interactivo
-
-                        </h2>
-
-                        <p>
-
-                            Seleccione un área del plano para visualizar su
-                            información, duración, actividades y estado de ejecución.
-
-                        </p>
-
-                    </div>
-
-                    <div class="floor-layout">
-
-                        <div class="floor-svg">
-
-                            <div id="svgContainer">
-
-                                <!-- SVG generado dinámicamente -->
-
-                            </div>
-
-                        </div>
-
-                        <aside class="floor-info">
-
-                            <h3>
-
-                                Información del Área
-
-                            </h3>
-
-                            <div id="areaInfo">
-
-                                <p>
-
-                                    Seleccione un área del plano.
-
-                                </p>
-
-                            </div>
-
-                        </aside>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-            <!-- =====================================================
-                CRONOGRAMA
-            ====================================================== -->
-
-            <section id="cronograma" class="section">
-
-                <div class="container">
-
-                    <div class="section-header">
-
-                        <span class="section-tag">
-
-                            Cronograma
-
-                        </span>
-
-                        <h2>
-
-                            Planificación del Proyecto
-
-                        </h2>
-
-                        <p>
-
-                            Cronograma tipo Microsoft Project generado a partir
-                            del archivo Excel suministrado.
-
-                        </p>
-
-                    </div>
-
-                    <div class="gantt-container">
-
-                        <div id="ganttChart">
-
-                            <!-- Gantt generado mediante JavaScript -->
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-            <!-- =====================================================
-                GALERÍA
-            ====================================================== -->
-
-            <section id="galeria" class="section">
-
-                <div class="container">
-
-                    <div class="section-header">
-
-                        <span class="section-tag">
-
-                            Evidencias
-
-                        </span>
-
-                        <h2>
-
-                            Antes y Después
-
-                        </h2>
-
-                        <p>
-
-                            Registro fotográfico del estado actual y del resultado
-                            final del proyecto.
-
-                        </p>
-
-                    </div>
-
-                    <div id="galleryContainer">
-
-                        <!-- Galería dinámica -->
-
-                    </div>
-
-                </div>
-
-            </section>
-
-            <!-- =====================================================
-                PROPUESTA
-            ====================================================== -->
-
-            <section id="propuesta" class="section">
-
-                <div class="container">
-
-                    <div class="section-header">
-
-                        <span class="section-tag">
-
-                            Propuesta
-
-                        </span>
-
-                        <h2>
-
-                            Alcance del Proyecto
-
-                        </h2>
-
-                    </div>
-
-                    <div class="proposal-grid">
-
-                        <article class="proposal-card">
-
-                            <h3>
-
-                                Introducción
-
-                            </h3>
-
-                            <p>
-
-                                SEPRECA presenta esta propuesta para ejecutar la
-                                remodelación integral del Goethe Institut Caracas,
-                                garantizando calidad constructiva, planificación,
-                                cumplimiento de cronograma y acabados de alto nivel.
-
-                            </p>
-
-                        </article>
-
-                        <article class="proposal-card">
-
-                            <h3>
-
-                                Beneficios
-
-                            </h3>
-
-                            <ul>
-
-                                <li>Planificación integral.</li>
-
-                                <li>Control permanente de obra.</li>
-
-                                <li>Personal especializado.</li>
-
-                                <li>Materiales certificados.</li>
-
-                                <li>Seguimiento técnico.</li>
-
-                                <li>Entrega bajo estándares internacionales.</li>
-
-                            </ul>
-
-                        </article>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-            <!-- =====================================================
-                PAGOS
-            ====================================================== -->
-
-            <section id="pagos" class="section">
-
-                <div class="container">
-
-                    <div class="section-header">
-
-                        <span class="section-tag">
-
-                            Condiciones Comerciales
-
-                        </span>
-
-                        <h2>
-
-                            Forma de Pago
-
-                        </h2>
-
-                    </div>
-
-                    <div class="payment-grid">
-
-                        <article class="payment-card">
-
-                            <h3>
-
-                                50%
-
-                            </h3>
-
-                            <p>
-
-                                Anticipo para inicio de los trabajos.
-
-                            </p>
-
-                        </article>
-
-                        <article class="payment-card">
-
-                            <h3>
-
-                                25%
-
-                            </h3>
-
-                            <p>
-
-                                Al finalizar la primera etapa del proyecto.
-
-                            </p>
-
-                        </article>
-
-                        <article class="payment-card">
-
-                            <h3>
-
-                                25%
-
-                            </h3>
-
-                            <p>
-
-                                Contra entrega y culminación total de la obra.
-
-                            </p>
-
-                        </article>
-
-                    </div>
-
-                </div>
-
-            </section>
-            <!-- =====================================================
-                FOOTER
-            ====================================================== -->
-
-        </main>
-
-        <footer class="footer">
-
-            <div class="container">
-
-                <div class="footer-grid">
-
-                    <div class="footer-brand">
-
-                        <img
-                            src="assets/logo-sepreca.png"
-                            alt="SEPRECA">
-
-                        <h3>
-
-                            SEPRECA
-
-                        </h3>
-
-                        <p>
-
-                            Soluciones Integrales en Ingeniería,
-                            Arquitectura y Construcción.
-
-                        </p>
-
-                    </div>
-
-                    <div class="footer-column">
-
-                        <h4>
-
-                            Proyecto
-
-                        </h4>
-
-                        <ul>
-
-                            <li>
-                                Dashboard
-                            </li>
-
-                            <li>
-                                Planos
-                            </li>
-
-                            <li>
-                                Cronograma
-                            </li>
-
-                            <li>
-                                Galería
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-                    <div class="footer-column">
-
-                        <h4>
-
-                            Cliente
-
-                        </h4>
-
-                        <ul>
-
-                            <li>
-
-                                Goethe Institut Caracas
-
-                            </li>
-
-                            <li>
-
-                                Remodelación Integral
-
-                            </li>
-
-                            <li>
-
-                                Caracas • Venezuela
-
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-                    <div class="footer-column">
-
-                        <h4>
-
-                            Contacto
-
-                        </h4>
-
-                        <ul>
-
-                            <li>
-
-                                www.sepreca.com
-
-                            </li>
-
-                            <li>
-
-                                contacto@sepreca.com
-
-                            </li>
-
-                            <li>
-
-                                +58 (000) 000-0000
-
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-                </div>
-
-                <div class="footer-copy">
-
-                    © 2025 SEPRECA.
-                    Todos los derechos reservados.
-
-                </div>
-
-            </div>
-
-        </footer>
-
-    </div>
-
-    <!-- =====================================================
-        MODAL UNIVERSAL
-    ====================================================== -->
-
-    <div
-        id="modal"
-        class="modal">
-
-        <div class="modal-window">
-
-            <button
-                class="modal-close"
-                id="closeModal">
-
-                <i class="fa-solid fa-xmark"></i>
-
-            </button>
-
-            <div id="modalContent">
+                </p>
 
             </div>
 
         </div>
 
+    </section>
+
+    <!-- ==========================================================
+         BENEFICIOS
+    =========================================================== -->
+
+    <section
+        id="beneficios"
+        class="section-soft">
+
+        <div class="container">
+
+            <div
+                class="section-header"
+                data-aos="fade-up">
+
+                <span class="section-tag">
+
+                    BENEFICIOS
+
+                </span>
+
+                <h2 class="section-title">
+
+                    Valor agregado para el Goethe Institut
+
+                </h2>
+
+            </div>
+
+            <div class="grid grid-3">
+
+                <article
+                    class="card"
+                    data-aos="fade-up"
+                    data-aos-delay="100">
+
+                    <i class="fa-solid fa-compass-drafting fa-3x"></i>
+
+                    <h3 class="mt-3">
+
+                        Diseño Integral
+
+                    </h3>
+
+                    <p class="mt-2">
+
+                        Soluciones arquitectónicas y técnicas desarrolladas específicamente para las necesidades del proyecto.
+
+                    </p>
+
+                </article>
+
+                <article
+                    class="card"
+                    data-aos="fade-up"
+                    data-aos-delay="200">
+
+                    <i class="fa-solid fa-calendar-check fa-3x"></i>
+
+                    <h3 class="mt-3">
+
+                        Planificación Profesional
+
+                    </h3>
+
+                    <p class="mt-2">
+
+                        Cronograma detallado de ejecución basado en metodología de planificación tipo Microsoft Project.
+
+                    </p>
+
+                </article>
+
+                <article
+                    class="card"
+                    data-aos="fade-up"
+                    data-aos-delay="300">
+
+                    <i class="fa-solid fa-shield-halved fa-3x"></i>
+
+                    <h3 class="mt-3">
+
+                        Control de Calidad
+
+                    </h3>
+
+                    <p class="mt-2">
+
+                        Supervisión permanente de cada actividad para garantizar estándares técnicos y constructivos.
+
+                    </p>
+
+                </article>
+
+                <article
+                    class="card"
+                    data-aos="fade-up"
+                    data-aos-delay="100">
+
+                    <i class="fa-solid fa-users-gear fa-3x"></i>
+
+                    <h3 class="mt-3">
+
+                        Equipo Especializado
+
+                    </h3>
+
+                    <p class="mt-2">
+
+                        Personal técnico multidisciplinario con experiencia en proyectos institucionales.
+
+                    </p>
+
+                </article>
+
+                <article
+                    class="card"
+                    data-aos="fade-up"
+                    data-aos-delay="200">
+
+                    <i class="fa-solid fa-leaf fa-3x"></i>
+
+                    <h3 class="mt-3">
+
+                        Materiales de Primera
+
+                    </h3>
+
+                    <p class="mt-2">
+
+                        Selección de materiales duraderos, sostenibles y alineados con los requerimientos del cliente.
+
+                    </p>
+
+                </article>
+
+                <article
+                    class="card"
+                    data-aos="fade-up"
+                    data-aos-delay="300">
+
+                    <i class="fa-solid fa-chart-line fa-3x"></i>
+
+                    <h3 class="mt-3">
+
+                        Seguimiento Ejecutivo
+
+                    </h3>
+
+                    <p class="mt-2">
+
+                        Indicadores de avance, control de hitos y reportes permanentes del estado del proyecto.
+
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================================================
+         DASHBOARD EJECUTIVO
+    =========================================================== -->
+
+    <section
+        id="dashboard"
+        class="section-light">
+
+        <div class="container">
+
+            <div
+                class="section-header"
+                data-aos="fade-up">
+
+                <span class="section-tag">
+
+                    DASHBOARD
+
+                </span>
+
+                <h2 class="section-title">
+
+                    Indicadores Ejecutivos del Proyecto
+
+                </h2>
+
+                <p class="section-description">
+
+                    Resumen general de los principales indicadores que serán utilizados para el seguimiento de la ejecución.
+
+                </p>
+
+            </div>
+
+            <div class="grid grid-4">
+
+                <div
+                    class="card text-center"
+                    data-aos="zoom-in">
+
+                    <h2 class="counter"
+
+                        data-target="2">
+
+                        0
+
+                    </h2>
+
+                    <p>
+
+                        Plantas Intervenidas
+
+                    </p>
+
+                </div>
+
+                <div
+                    class="card text-center"
+                    data-aos="zoom-in"
+                    data-aos-delay="100">
+
+                    <h2 class="counter"
+
+                        data-target="12">
+
+                        0
+
+                    </h2>
+
+                    <p>
+
+                        Áreas de Trabajo
+
+                    </p>
+
+                </div>
+
+                <div
+                    class="card text-center"
+                    data-aos="zoom-in"
+                    data-aos-delay="200">
+
+                    <h2 class="counter"
+
+                        data-target="3">
+
+                        0
+
+                    </h2>
+
+                    <p>
+
+                        Fases del Proyecto
+
+                    </p>
+
+                </div>
+
+                <div
+                    class="card text-center"
+                    data-aos="zoom-in"
+                    data-aos-delay="300">
+
+                    <h2 class="counter"
+
+                        data-target="100">
+
+                        0
+
+                    </h2>
+
+                    <p>
+
+                        % Supervisión Técnica
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================================================
+         CRONOGRAMA DEL PROYECTO
+    =========================================================== -->
+
+    <section
+        id="cronograma"
+        class="section-soft">
+
+        <div class="container">
+
+            <div
+                class="section-header"
+                data-aos="fade-up">
+
+                <span class="section-tag">
+
+                    PLANIFICACIÓN
+
+                </span>
+
+                <h2 class="section-title">
+
+                    Cronograma General del Proyecto
+
+                </h2>
+
+                <p class="section-description">
+
+                    El proyecto será ejecutado mediante una planificación
+                    estructurada por actividades, permitiendo controlar el
+                    avance, la duración y los hitos principales de la obra.
+
+                </p>
+
+            </div>
+
+            <!-- Barra de progreso -->
+
+            <div class="project-progress">
+
+                <div class="project-progress-header">
+
+                    <span>Avance General</span>
+
+                    <strong id="project-progress-label">
+
+                        0%
+
+                    </strong>
+
+                </div>
+
+                <div class="project-progress-track">
+
+                    <div
+                        id="project-progress-bar"
+                        class="project-progress-fill">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Gantt -->
+
+            <div
+                id="gantt-container"
+                class="gantt-container">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================================================
+         PLANOS INTERACTIVOS
+    =========================================================== -->
+
+    <section
+        id="planos"
+        class="section-light">
+
+        <div class="container">
+
+            <div
+                class="section-header"
+                data-aos="fade-up">
+
+                <span class="section-tag">
+
+                    PLANOS
+
+                </span>
+
+                <h2 class="section-title">
+
+                    Áreas de intervención
+
+                </h2>
+
+                <p class="section-description">
+
+                    Explore los planos arquitectónicos del Goethe Institut.
+                    Cada espacio será interactivo y mostrará información
+                    técnica al seleccionar un área.
+
+                </p>
+
+            </div>
+
+            <div class="grid grid-2">
+
+                <!-- Planta Inferior -->
+
+                <article
+                    class="card">
+
+                    <header class="plan-header">
+
+                        <h3>
+
+                            Planta Inferior
+
+                        </h3>
+
+                    </header>
+
+                    <div
+                        id="svg-planta-inferior"
+                        class="svg-map">
+
+                    </div>
+
+                </article>
+
+                <!-- Planta Superior -->
+
+                <article
+                    class="card">
+
+                    <header class="plan-header">
+
+                        <h3>
+
+                            Planta Superior
+
+                        </h3>
+
+                    </header>
+
+                    <div
+                        id="svg-planta-superior"
+                        class="svg-map">
+
+                    </div>
+
+                </article>
+
+            </div>
+
+            <!-- Información -->
+
+            <div
+                id="area-info"
+                class="card mt-5">
+
+                <h3>
+
+                    Información del Área
+
+                </h3>
+
+                <p>
+
+                    Seleccione una zona del plano para visualizar
+                    su descripción, actividades y observaciones.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================================================
+         GALERÍA
+    =========================================================== -->
+
+    <section
+        id="galeria"
+        class="section-soft">
+
+        <div class="container">
+
+            <div
+                class="section-header"
+                data-aos="fade-up">
+
+                <span class="section-tag">
+
+                    GALERÍA
+
+                </span>
+
+                <h2 class="section-title">
+
+                    Antes y Después
+
+                </h2>
+
+                <p class="section-description">
+
+                    Comparación visual del estado actual y la propuesta
+                    arquitectónica para cada espacio intervenido.
+
+                </p>
+
+            </div>
+
+            <div
+                id="gallery-grid"
+                class="gallery-grid">
+
+                <!-- Generado desde JavaScript -->
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================================================
+         METODOLOGÍA
+    =========================================================== -->
+
+    <section
+        id="metodologia"
+        class="section-light">
+
+        <div class="container">
+
+            <div
+                class="section-header">
+
+                <span class="section-tag">
+
+                    METODOLOGÍA
+
+                </span>
+
+                <h2 class="section-title">
+
+                    Metodología de ejecución
+
+                </h2>
+
+            </div>
+
+            <div class="grid grid-3">
+
+                <article class="card">
+
+                    <i class="fa-solid fa-magnifying-glass fa-3x"></i>
+
+                    <h3 class="mt-3">
+
+                        Diagnóstico
+
+                    </h3>
+
+                    <p class="mt-2">
+
+                        Levantamiento técnico,
+                        validación de planos,
+                        inspección y planificación.
+
+                    </p>
+
+                </article>
+
+                <article class="card">
+
+                    <i class="fa-solid fa-screwdriver-wrench fa-3x"></i>
+
+                    <h3 class="mt-3">
+
+                        Ejecución
+
+                    </h3>
+
+                    <p class="mt-2">
+
+                        Desarrollo de las actividades
+                        conforme al cronograma aprobado.
+
+                    </p>
+
+                </article>
+
+                <article class="card">
+
+                    <i class="fa-solid fa-circle-check fa-3x"></i>
+
+                    <h3 class="mt-3">
+
+                        Entrega
+
+                    </h3>
+
+                    <p class="mt-2">
+
+                        Control de calidad,
+                        pruebas,
+                        recepción y cierre del proyecto.
+
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================================================
+         CONDICIONES COMERCIALES
+    =========================================================== -->
+
+    <section
+        id="pagos"
+        class="section-dark">
+
+        <div class="container">
+
+            <div
+                class="section-header"
+                data-aos="fade-up">
+
+                <span class="section-tag">
+
+                    CONDICIONES COMERCIALES
+
+                </span>
+
+                <h2 class="section-title">
+
+                    Esquema de inversión y forma de pago
+
+                </h2>
+
+                <p class="section-description">
+
+                    Para garantizar la continuidad del proyecto y asegurar la
+                    disponibilidad de materiales, personal especializado y
+                    supervisión técnica durante toda la ejecución, se propone
+                    el siguiente esquema de pagos.
+
+                </p>
+
+            </div>
+
+            <div class="grid grid-3">
+
+                <article class="card payment-card">
+
+                    <div class="payment-number">
+
+                        50%
+
+                    </div>
+
+                    <h3>
+
+                        Inicio del Proyecto
+
+                    </h3>
+
+                    <p>
+
+                        Anticipo destinado a la movilización de personal,
+                        adquisición de materiales,
+                        logística,
+                        equipos y planificación inicial.
+
+                    </p>
+
+                </article>
+
+                <article class="card payment-card">
+
+                    <div class="payment-number">
+
+                        25%
+
+                    </div>
+
+                    <h3>
+
+                        Primera Etapa
+
+                    </h3>
+
+                    <p>
+
+                        Pago correspondiente al cierre de la primera fase
+                        constructiva y validación del avance por parte del
+                        cliente.
+
+                    </p>
+
+                </article>
+
+                <article class="card payment-card">
+
+                    <div class="payment-number">
+
+                        25%
+
+                    </div>
+
+                    <h3>
+
+                        Entrega Final
+
+                    </h3>
+
+                    <p>
+
+                        Pago final una vez culminadas todas las actividades,
+                        realizadas las pruebas de funcionamiento y efectuada
+                        la recepción conforme del proyecto.
+
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================================================
+         CTA
+    =========================================================== -->
+
+    <section class="section-light">
+
+        <div class="container">
+
+            <div
+                class="card text-center">
+
+                <h2>
+
+                    Construyendo espacios que inspiran confianza
+
+                </h2>
+
+                <p class="mt-3">
+
+                    SEPRECA pone a disposición del Goethe Institut
+                    un equipo multidisciplinario comprometido con la
+                    excelencia técnica, el cumplimiento de los plazos
+                    y la calidad de cada detalle del proyecto.
+
+                </p>
+
+                <div class="hero-actions mt-5">
+
+                    <a
+                        href="#cronograma"
+                        class="btn btn-primary">
+
+                        Ver Cronograma
+
+                    </a>
+
+                    <a
+                        href="#planos"
+                        class="btn btn-secondary">
+
+                        Explorar Planos
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<!-- ==========================================================
+     FOOTER
+=========================================================== -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+
+                <img
+                    src="assets/logo-sepreca.png"
+                    alt="SEPRECA"
+                    class="footer-logo">
+
+                <p class="mt-3">
+
+                    Ingeniería • Arquitectura • Construcción
+
+                </p>
+
+            </div>
+
+            <div>
+
+                <h4>
+
+                    Proyecto
+
+                </h4>
+
+                <ul>
+
+                    <li><a href="#introduccion">Introducción</a></li>
+
+                    <li><a href="#beneficios">Beneficios</a></li>
+
+                    <li><a href="#cronograma">Cronograma</a></li>
+
+                    <li><a href="#planos">Planos</a></li>
+
+                </ul>
+
+            </div>
+
+            <div>
+
+                <h4>
+
+                    Contacto
+
+                </h4>
+
+                <p>
+
+                    SEPRECA
+
+                </p>
+
+                <p>
+
+                    Caracas • Venezuela
+
+                </p>
+
+                <p>
+
+                    www.sepreca.com
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            © 2025 SEPRECA.
+            Todos los derechos reservados.
+
+        </div>
+
     </div>
 
-    <!-- =====================================================
-        BOTÓN VOLVER ARRIBA
-    ====================================================== -->
+</footer>
 
-    <button
-        id="scrollTop"
-        class="scroll-top">
+<!-- ==========================================================
+     MODAL UNIVERSAL
+=========================================================== -->
 
-        <i class="fa-solid fa-arrow-up"></i>
+<div
+    id="modal"
+    class="modal hidden">
 
-    </button>
+    <div class="modal-content">
 
-    <!-- =====================================================
-        LIBRERÍAS
-    ====================================================== -->
+        <button
+            id="modal-close"
+            class="modal-close">
 
-    <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js">
-    </script>
+            <i class="fa-solid fa-xmark"></i>
 
-    <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js">
-    </script>
+        </button>
 
-    <script
-        src="https://unpkg.com/aos@2.3.4/dist/aos.js">
-    </script>
+        <div id="modal-body">
 
-    <!-- =====================================================
-        JAVASCRIPT
-    ====================================================== -->
+        </div>
 
-    <script src="js/utils.js"></script>
+    </div>
 
-    <script src="js/data.js"></script>
+</div>
 
-    <script src="js/dashboard.js"></script>
+<!-- ==========================================================
+     LIBRERÍAS
+=========================================================== -->
 
-    <script src="js/floorplan.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"></script>
 
-    <script src="js/gantt.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js"></script>
 
-    <script src="js/gallery.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
-    <script src="js/app.js"></script>
+<!-- ==========================================================
+     JAVASCRIPT
+=========================================================== -->
+
+<script src="js/app.js"></script>
+
+<script src="js/dashboard.js"></script>
+
+<script src="js/gantt.js"></script>
+
+<script src="js/svg-map.js"></script>
+
+<script src="js/gallery.js"></script>
+
+<script src="js/animations.js"></script>
+
+<script>
+
+AOS.init({
+
+    duration:900,
+
+    once:true,
+
+    easing:"ease-out-cubic"
+
+});
+
+</script>
 
 </body>
 
